@@ -1,14 +1,72 @@
 body {
-    background-color: 	#FAFAFA  ;
+    background-color: #eee;
     margin: 0;
     padding: 0;
 }
 
-header{
-    background-color: #FF5722  ;
+#header-top{
+    background-color: var(--colorPrimario);
     display: flex;
-    flex: 2;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
+}
+
+.icon{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+}
+
+#icon-user, #icon-carrito{
+    display: flex;
+    align-items: center;
+}
+
+.text-icon-user, .text-icon-carrito{
+    color: white;
+}
+
+#icon-user:hover .text-icon-user{
+    color: var(--colorSecundario);
+}
+
+#icon-carrito:hover .text-icon-carrito{
+    color: var(--colorSecundario);
+}
+
+.img-icon{
+    width: 350px;
+    height: 60px;
+}
+
+.img-icon-user, .img-icon-carrito{
+    width: 55px;
+    height: 55px;
+}
+
+#contenedor-iconos{
+    display: flex;
+    padding-left: 200px;
+    gap: 100px;
+}
+
+.barra-busqueda {
+    background-color: var(--colorPrimario);
+    border-radius: 8px;
+    border: 1px solid #FAFAFA;
+    width: 500px;
+    height: 40px;
+    text-align:center;
+    color: white;
+}
+
+.barra-busqueda:focus {
+    border-color: var(--colorSecundario);
+    outline: none;
+}
+
+:root{
+    --colorPrimario: #212121;
+    --colorSecundario: #FF5722;
 }
