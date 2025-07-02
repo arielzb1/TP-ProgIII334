@@ -1,15 +1,11 @@
 body {
-    background-color: var(--colorBackground);
+    background-color: #eee;
     margin: 0;
     padding: 0;
 }
 
 a{
     text-decoration: none;
-}
-
-p1 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #header-top{
@@ -31,9 +27,12 @@ p1 {
     align-items: center;
 }
 
-.text-icon-user, 
-.text-icon-carrito{
+.text-icon-user{
     color: white;
+
+}
+.text-icon-carrito{
+    color: var(--colorSeleccion);
 }
 
 #icon-user:hover .text-icon-user{
@@ -49,12 +48,7 @@ p1 {
     height: 60px;
 }
 
-.img-icon-user{
-    width: 45px;
-    height: 45px;
-}
-
-.img-icon-carrito{
+.img-icon-user, .img-icon-carrito{
     width: 55px;
     height: 55px;
 }
@@ -86,7 +80,7 @@ p1 {
 }
 
 #header-bot{
-    background-color: var(--colorBackgroundSecundario);
+    border:2px solid;
 }
 
 #listado-opciones{
@@ -95,36 +89,8 @@ p1 {
     gap: 20px;
 }
 
-#opcion-armatupc,
-#opcion-hadware,
-#opcion-perisfericos,
-#opcion-notebooks,
-#opcion-monitores,
-#opcion-vertodo{
-    font-size: 20px;
-}
-
-#opcion-armatupc:hover,
-#opcion-hadware:hover,
-#opcion-perisfericos:hover,
-#opcion-notebooks:hover,
-#opcion-monitores:hover,
-#opcion-vertodo:hover{
-    color: var(--colorSecundario);
-}
-
-.publicidad {
-    width: 800px;
-    border: 2px solid var(--colorBackground);
-    border-radius: 30px;
-    margin: 0 auto;          
-    display: block;         
-}
-
 :root{
     --colorPrimario: #212121;
     --colorSecundario: #FF5722;
     --colorSeleccion: #ff3f04;
-    --colorBackground: #eee;
-    --colorBackgroundSecundario: #f5f3f3fd;
 }
