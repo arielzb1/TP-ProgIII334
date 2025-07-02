@@ -1,3 +1,5 @@
+import { Header } from "../../js/Header.js";
+
 function detectarIconoUsuario(){
     document.getElementById("icon-user").addEventListener("click",()=>{cambiarVentana("../login/login.html");});
 };
@@ -17,6 +19,8 @@ function cambiarVentana(direccion){
 }
 
 function init(){
+    const header = new Header();
+    header.mostrar();
     detectarIconos();
 }
 

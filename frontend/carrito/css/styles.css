@@ -31,9 +31,12 @@ p1 {
     align-items: center;
 }
 
-.text-icon-user, 
+.text-icon-user{
+    color:white
+} 
+
 .text-icon-carrito{
-    color: white;
+    color: var(--colorSeleccion);
 }
 
 #icon-user:hover .text-icon-user{
