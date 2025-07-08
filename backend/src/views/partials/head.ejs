@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeGame Admin</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+    <div id="header-top">
+        <nav> 
+            <a href="../index.ejs"> 
+                <img class="img-icon" src="../img/icon/icon-with-text.png" alt="Logo HoGame">
+            </a>
+        </nav>        
+
+        <input type="text" placeholder="Buscar productos" class="barra-busqueda">
+
+        <div id="contenedor-iconos">
+            <div id="icon-user">
+                <img class="img-icon-user" src="../img/icon/user.png" alt="icon user">
+                <p class="text-icon-user">Cuenta</p>
+            </div>
+        </div>
+    </div>
+    <div id="header-bot">
+        <nav id="listado-opciones">
+            <ul>
+                <a id="opcion-crear" href="/dashboard/crear">
+                    <tr><span>Crear</span></tr>
+                </a>
+                <a id="opcion-editar" href="/dashboard/editar">
+                    <tr><span>Editar</span></tr>
+                </a>
+                <a id="opcion-eliminar" href="/dashboard/eliminar">
+                    <tr><span>Eliminar</span></tr>
+                </a>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>

@@ -1,5 +1,9 @@
-import routes from "./routes.js";
+import productRoutes from "./product.routes.js";
+import userRoutes from "./user.routes.js";
+import viewRoutes from "./view.routes.js"
 
 export {
-    routes
+    productRoutes,
+    userRoutes,
+    viewRoutes
 }

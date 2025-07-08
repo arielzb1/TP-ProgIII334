@@ -1,7 +1,7 @@
 import express from "express";
 import environments from "./src/api/config/environments.js";
 import cors from "cors";
-import { routes } from "./src/api/routes/index.js";
+import { productRoutes, userRoutes, viewRoutes } from "./src/api/routes/index.js";
 import { loggerUrl } from "./src/api/middlewares/middlewares.js";
 import { __dirname, join } from "./src/api/utils/index.js";
 
@@ -26,14 +26,16 @@ app.use(loggerUrl);
 
 app.get("/dashboard", (req,res) => {
     res.render("index", {
-        title: "Inicio dashboard"
+        title: "HomeGame Admin"
     });
-})
+});
 
+app.use("/api/products", productRoutes);
 
-app.use("/api", routes);
+app.use("/api/users", userRoutes);
 
+app.use("/dashboard", viewRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`);
-})
+});

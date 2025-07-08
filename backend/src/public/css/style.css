@@ -1,0 +1,119 @@
+body {
+    background-color: var(--colorBackground);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#header-top{
+    background-color: var(--colorPrimario);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.icon{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+}
+
+#icon-user, #icon-carrito{
+    display: flex;
+    align-items: center;
+}
+
+.text-icon-user, 
+.text-icon-carrito{
+    color: white;
+}
+
+#icon-user:hover .text-icon-user{
+    color: var(--colorSecundario);
+}
+
+#icon-carrito:hover .text-icon-carrito{
+    color: var(--colorSecundario);
+}
+
+.img-icon{
+    width: 350px;
+    height: 60px;
+}
+
+.img-icon-user{
+    width: 45px;
+    height: 45px;
+}
+
+.img-icon-carrito{
+    width: 55px;
+    height: 55px;
+}
+
+#contenedor-iconos{
+    display: flex;
+    padding-left: 200px;
+    gap: 50px;
+}
+
+.barra-busqueda {
+    background-color: var(--colorPrimario);
+    border-radius: 8px;
+    border: 1px solid #FAFAFA;
+    width: 500px;
+    height: 40px;
+    justify-content: center;
+    text-align:center;
+    color: white;
+    margin-left: 200px;
+}
+
+.barra-busqueda:hover{
+    border-color:  var(--colorSecundario);
+}
+
+.barra-busqueda:focus {
+    border-color: var(--colorSeleccion);
+    outline: none;
+}
+
+#header-bot{
+    background-color: var(--colorBackgroundSecundario);
+}
+
+#listado-opciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+}
+
+#opcion-crear,
+#opcion-editar,
+#opcion-eliminar
+{
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#opcion-crear:hover,
+#opcion-editar:hover,
+#opcion-eliminar:hover{
+    color: var(--colorSecundario);
+}
+
+:root{
+    --colorPrimario: #212121;
+    --colorSecundario: #FF5722;
+    --colorSeleccion: #ff3f04;
+    --colorBackground: #303030;
+    --colorBackgroundSecundario: #3f3f3f;
+}

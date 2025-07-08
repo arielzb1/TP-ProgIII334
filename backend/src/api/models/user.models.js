@@ -1,4 +1,4 @@
-import connection from "../../database/db.js";
+import connection from "../database/db.js";
 
 const seleccionarUsuarios = async () => {
     return await connection.query(`SELECT * FROM users`);
