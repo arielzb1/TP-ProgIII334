@@ -1,0 +1,59 @@
+body {
+    background-color: var(--colorBackground);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#login-conteiner {
+    width: 400px;       
+    padding: 50px;      
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--colorSeleccion);
+    border-radius: 10px;
+}
+
+.login-text{
+    background-color: var(--colorSecundario);
+    margin-bottom: 40px;
+    width: 135%;  
+    text-align: center;
+}
+
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorBackgroundSecundario);
+    width: 134%;  
+    padding: 20px;         /* Espacio interno para que no quede pegado */
+    box-sizing: border-box;
+}
+
+#emailUser,
+#passwordUser{
+    width: 300px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#login-bottom{
+    margin-top: 15px;
+    width: 150px;
+    height: 35px;
+}
+
+:root{
+    --colorSecundario: #FF5722;
+    --colorSeleccion: #ff3f04;
+    --colorBackground: #212121;
+    --colorBackgroundSecundario: #3a3a3a;
+}

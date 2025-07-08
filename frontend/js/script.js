@@ -1,4 +1,4 @@
-import { Header } from "../../js/Header.js";
+import { Header } from "./Header.js";
 
 function init(){
     const header = new Header();

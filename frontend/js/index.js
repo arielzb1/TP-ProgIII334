@@ -1,4 +1,4 @@
-import { Header } from "../../js/Header.js";
+import { Header } from "./Header.js";
 
 function detectarIconoUsuario(){
     document.getElementById("icon-user").addEventListener("click",()=>{cambiarVentana("../login/login.html");});
