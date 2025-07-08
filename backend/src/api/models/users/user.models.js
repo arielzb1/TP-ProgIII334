@@ -1,11 +1,14 @@
 import connection from "../../database/db.js";
 
 const seleccionarUsuarios = async () => {
-    let sql = `SELECT * FROM users`;
+    return await connection.query(`SELECT * FROM users`);
+}
 
-    return await connection.query(sql);
+const obtenerUsuarioLogueado = async (email, password) => {
+    return await connection.query(`SELECT * FROM users WHERE email = ? AND password = ?`, [email, password]);
 }
 
 export default {
-    seleccionarUsuarios
+    seleccionarUsuarios,
+    obtenerUsuarioLogueado
 }

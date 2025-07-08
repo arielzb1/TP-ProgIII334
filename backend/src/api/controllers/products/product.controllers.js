@@ -7,7 +7,7 @@ export const obtenerProdutos = async (req, res) =>{
 
         res.status(200).json({
             payload: rows,
-            message: rows.length === 0 ? "No se enontraron produtos" : "Produtos enontrados"
+            message: rows.length === 0 ? "No se encontraron produtos" : "Produtos encontrados"
         });
     }
     catch(error){
@@ -19,7 +19,7 @@ export const obtenerProdutos = async (req, res) =>{
     }   
 }
 
-export const obtenerProductosId = async (req, res) => {
+export const obtenerProductoId = async (req, res) => {
     try {
         let {id} = req.params;
 
