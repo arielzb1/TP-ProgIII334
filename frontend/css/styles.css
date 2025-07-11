@@ -31,13 +31,10 @@ p1 {
     align-items: center;
 }
 
-.text-icon-user{
+.text-icon-user,
+.text-icon-carrito{
     color:white
 } 
-
-.text-icon-carrito{
-    color: var(--colorSeleccion);
-}
 
 #icon-user:hover .text-icon-user{
     color: var(--colorSecundario);
@@ -124,6 +121,12 @@ p1 {
     border-radius: 30px;
     margin: 0 auto;          
     display: block;         
+}
+
+#categoriaProd{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
 }
 
 :root{

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>HoGame</title>
+</head>
+<body>
+    <header>
+        <div id="header-top"></div>
+        <div id="header-bot"></div>
+    </header>
+    <main>
+        <form id="categoriaProd">
+            <label>
+                <input type="radio" name="categoria" value="auriculares" onchange="this.form.submit()">
+                Auriculares
+            </label><br>
+
+            <label>
+                <input type="radio" name="categoria" value="mouse" onchange="this.form.submit()">
+                Mouse
+            </label><br>
+
+            <label>
+                <input type="radio" name="categoria" value="teclado" onchange="this.form.submit()">
+                Teclado
+            </label><br>
+
+            <label>
+                <input type="radio" name="categoria" value="joystciks" onchange="this.form.submit()">
+                Joystciks
+            </label><br>
+    </main>
+    <script type="module" src="./js/productos.js"></script>
+</body>
+</html>

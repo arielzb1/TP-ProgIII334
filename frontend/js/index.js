@@ -24,5 +24,5 @@ function init(){
     detectarIconos();
 }
 
-/* Que se cargue el codigo despues de iniciar la pagina */
-document.addEventListener("DOMContentLoaded", init);
+
+init();
