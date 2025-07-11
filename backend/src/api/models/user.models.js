@@ -5,7 +5,8 @@ const seleccionarUsuarios = async () => {
 }
 
 const obtenerUsuarioLogueado = async (email, password) => {
-    return await connection.query(`SELECT * FROM users WHERE email = ? AND password = ?`, [email, password]);
+    return await connection.query(`SELECT * FROM users WHERE email = ? AND password = ?`, 
+                                   [email, password]);
 }
 
 export default {

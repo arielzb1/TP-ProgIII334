@@ -1,4 +1,79 @@
 <%- include("partials/head.ejs")%>
-    <main>
-        
+    <main id="contenedor-post">
+        <div id="altaProducts-conteiner" class="crudForm-container">
+            <h2>Alta producto</h2>
+
+            <form id="altaProducts-form" autocomplete="off">
+                <label for="imagenProd">Imagen(URL):</label>
+                <input type="url" name="img" id="imagenProd" required>
+
+                <label for="categoriaProd">Categoria:</label>
+                <select name="categoria" id="categoriaProd" required>
+                    <option value="auriculares">Auriculares</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="joysticks">Joysticks</option>
+                </select>
+
+                <label for="nombreProd">Nombre:</label>
+                <input type="text" name="nombre" id="nombreProd" required>
+
+                <label for="descripcionProd">Descripción:</label>
+                <input type="text" name="descripcion" id="descripcionProd" required>
+            
+                <label for="precioProd">Precio:</label>
+                <input type="number" name="precio" id="precioProd" required>
+
+                <label for="stockProd">Stock:</label>
+                <input type="number" name="stock" id="stockProd" value=1 required>
+
+                <input type="submit" value="Crear producto">
+            </form>
+        </div>
     </main>
+
+    <script>
+        let altaProducts_form = document.getElementById("altaProducts-form");
+
+        altaProducts_form.addEventListener("submit", async(event) =>{
+
+            event.preventDefault() 
+
+            let formData = new FormData(event.target); 
+
+            let data = Object.fromEntries(formData.entries()); 
+            console.log(data);
+            
+            if(!data.nombre || !data.descripcion || !data.precio || !data.img || !data.stock){
+                alert("Todos los campos son obligatorios");
+                return;
+            }
+
+            let url = "http://localhost:3000/api";
+            
+            try{
+                let response = await fetch(`${url}/products`,{
+                    method:"POST",
+                    headers:{
+                        "Content-Type":"application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+                console.log()
+                if(response.ok){
+                    console.log(response);
+
+                    let result = await response.json();
+                    console.log(result.message);
+                    alert(result.meessage);
+                }else{
+                    let error = await response.json();
+                    console.log("Error:", error.meessage)
+                }
+            }catch(error){
+                console.log("Error al enviar los datos", error);
+                alert("Error al enviar la solicitud");
+            }
+            
+        })
+    </script>

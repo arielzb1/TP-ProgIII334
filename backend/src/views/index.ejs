@@ -1,2 +1,43 @@
 <%- include("partials/head.ejs")%>
-    
+    <main id="contenedor-get">
+        <div id="productos-conteiner">
+            <ul id="productos-lista">
+
+            </ul>
+        </div>
+    </main>
+    <script>
+        async function obtenerDatosProductos() {
+            const url = "http://localhost:3000/api"
+
+            try{
+                let respuesta = await fetch(`${url}/products`);
+
+                let datos = await respuesta.json();
+
+                mostrarDatosProductos(datos);
+            }catch(error){
+                console.error("Error: ", error);
+            }
+        }
+
+        function mostrarDatosProductos(array){
+            let listaProductos = array.payload; 
+
+            let productos_lista = document.getElementById('productos-lista');
+            let htmlProducto = '';
+
+            listaProductos.forEach(producto => {
+                htmlProducto += `<div class="card-product">
+                    <img src="${producto.img}" class="img-product">
+                    <h3 class="nombre-product">${producto.nombre}</h3> 
+                    <p class="precio-product">(x${producto.stock})</p> 
+                    <p class="precio-product">$${producto.precio}</p> 
+                </div>`;
+            });
+
+            productos_lista.innerHTML = htmlProducto;
+        }
+
+        obtenerDatosProductos();
+    </script>

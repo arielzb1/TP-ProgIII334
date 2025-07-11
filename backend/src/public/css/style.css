@@ -1,3 +1,7 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     background-color: var(--colorBackground);
     margin: 0;
@@ -6,6 +10,10 @@ body {
 
 a{
     text-decoration: none;
+}
+
+h2{
+    color: white;
 }
 
 #header-top{
@@ -101,13 +109,69 @@ a{
     margin: 20px;
     font-size: 20px;
     color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 #opcion-crear:hover,
 #opcion-editar:hover,
 #opcion-eliminar:hover{
     color: var(--colorSecundario);
+}
+
+#altaProducts-conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#altaProducts-form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+
+}
+
+#imagenProd, 
+#categoriaProd, 
+#nombreProd, 
+#descripcionProd, 
+#precioProd,
+#stockProd{
+    margin: 15px;
+}
+
+#productos-lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.card-product{
+    border: 1px solid var(--colorSeleccion);
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.img-product{
+    width: 200px;
+}
+
+#getProduct-container,
+#getId-list,
+#updateForm-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 :root{
